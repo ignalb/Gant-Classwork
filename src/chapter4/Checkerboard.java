@@ -1,9 +1,15 @@
 package chapter4;
 
 import java.awt.Color;
+import java.awt.GridLayout;
 
 import javax.swing.JFrame;
 
+/**
+ * 
+ * @author Ignacio Pacheco
+ *
+ */
 public class Checkerboard extends JFrame{
 
 	/**
@@ -29,13 +35,48 @@ public class Checkerboard extends JFrame{
 		color2 = c2;
 		width = w;
 		height = h;
+		panels = new ColorPanel[w*h];
+		this.setLayout(new GridLayout(height, width));
+		this.setTitle("Checkerboard");
+		
+		if(width % 2 == 0){
+			addEvenPattern();
+		} else {
+			addOddPattern();
+		}
+		
 	}
 	
-	public static void main(String[] args){
+	private void addEvenPattern() {
 		for(int i = 0; i < height; i++){
 			for(int j = 0; j < width; j++){
-				//TODO finish
+				if(i % 2 == 0){
+					if(j % 2 == 0){
+						panels[i] = new ColorPanel(color1);
+					} else {
+						panels[i] = new ColorPanel(color2);
+					}
+				} else {
+					if(j % 2 == 0){
+						panels[i] = new ColorPanel(color2);
+					} else {
+						panels[i] = new ColorPanel(color1);
+					}
+				}
+				this.add(panels[i]);
 			}
+		}
+		
+	}
+
+	public void addOddPattern(){
+		for(int i = 0; i < height * width; i++){
+			if(i % 2 == 0){
+				panels[i] = new ColorPanel(color1);
+			} else {
+				panels[i] = new ColorPanel(color2);
+			}
+			this.add(panels[i]);
 		}
 	}
 	
