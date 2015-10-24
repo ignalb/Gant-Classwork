@@ -38,6 +38,7 @@ public class Checkerboard extends JFrame{
 		panels = new ColorPanel[w*h];
 		this.setLayout(new GridLayout(height, width));
 		this.setTitle("Checkerboard");
+		this.setSize(600, 600);
 		
 		if(width % 2 == 0){
 			addEvenPattern();
