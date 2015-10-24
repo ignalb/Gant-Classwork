@@ -20,4 +20,9 @@ public class ColorPanel extends JPanel {
 		this.setBackground(c);
 	}
 	
+	public ColorPanel(Color c, int w, int h){
+		this.setBackground(c);
+		this.setSize(w, h);
+	}
+	
 }
