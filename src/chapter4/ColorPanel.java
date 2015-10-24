@@ -1,6 +1,7 @@
 package chapter4;
 
 import java.awt.Color;
+import java.awt.Dimension;
 
 import javax.swing.JPanel;
 
@@ -22,7 +23,7 @@ public class ColorPanel extends JPanel {
 	
 	public ColorPanel(Color c, int w, int h){
 		this.setBackground(c);
-		this.setSize(w, h);
+		this.setPreferredSize(new Dimension(w, h));
 	}
 	
 }
