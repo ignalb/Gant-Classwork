@@ -8,34 +8,38 @@ import java.util.Scanner;
  *
  */
 public class Project4_06 {
-
+	static Scanner in = new Scanner(System.in);
+	
 	/***
 	 * Calculates exponential Population<br>
-	 * final population = initial population * growth rate ^ time
+	 * final population = initial population * growth rate ^ (time / time to rate)
 	 * @param init Initial population
 	 * @param rate Rate of growth
 	 * @param time Time in hours
+	 * @param ct Completion time
 	 * @return
 	 */
-	private static double calcPop(int init, double rate, double time){
-		return init * Math.pow(rate, time);
+	private static double calcPop(int init, double rate, double time, double ct){
+		return init * Math.pow(rate, time/ct);
 	}
 	
 	public static void main(String[] args){
-		Scanner in = new Scanner(System.in);
-		double growthRate, time;
+		
+		double growthRate, time, timeToRate;
 		int population;
 		
 		System.out.print("Initial Population: ");
-		population = in.nextInt();
+		population = (int) Math.abs(in.nextInt());
 		System.out.print("Rate of Growth: ");
-		growthRate = in.nextDouble();
-		System.out.print("Time in hours: ");
-		time = in.nextDouble();
+		growthRate = Math.abs(in.nextDouble());
+		System.out.print("Time to achieve rate: ");
+		timeToRate = Math.abs(in.nextDouble());
+		System.out.print("Time elapsed in hours: ");
+		time = Math.abs(in.nextDouble());
 		
-		population = (int) calcPop(population, growthRate, time);
-		System.out.println("Population after " + time + "hrs: " + population);
-		in.close();
+		population = (int) calcPop(population, growthRate, time, timeToRate);
+		System.out.println("Population after " + time + " hrs: " + population);
+		
 	}
 	
 }
