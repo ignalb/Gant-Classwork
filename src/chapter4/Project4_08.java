@@ -29,6 +29,7 @@ public class Project4_08 {
 				System.out.print("Base (2 or greater): ");
 				base = in.nextInt();
 			}while(base < 2);
+			System.out.print("Exponent: ");
 			exp = in.nextInt();
 			
 			if(exp == -1){
