@@ -2,6 +2,11 @@ package chapter7;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * @author Ignacio Pacheco
+ *
+ */
 public class Project7_5 {
 
 	static int euclideanAlgorithm(int n1, int n2){

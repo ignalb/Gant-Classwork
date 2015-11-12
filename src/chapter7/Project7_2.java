@@ -2,6 +2,11 @@ package chapter7;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * @author Ignacio Pacheco
+ *
+ */
 public class Project7_2 {
 
 	public static void printNum(int num){
