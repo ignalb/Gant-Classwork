@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Project7_9 {
+public class Project7_09 {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);

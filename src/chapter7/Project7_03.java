@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author Ignacio Pacheco
  *
  */
-public class Project7_3 {
+public class Project7_03 {
 	
 	static String numberToLetter(int number){
 		if(number >= 60) {

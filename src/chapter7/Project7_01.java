@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author Ignacio Pacheco
  *
  */
-public class Project7_1 {
+public class Project7_01 {
 	
 	public static int random(int max){
 		return random(1, max);

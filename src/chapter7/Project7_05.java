@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author Ignacio Pacheco
  *
  */
-public class Project7_5 {
+public class Project7_05 {
 
 	static int euclideanAlgorithm(int n1, int n2){
 		n1 = Math.abs(n1);

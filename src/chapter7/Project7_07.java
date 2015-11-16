@@ -5,7 +5,7 @@ package chapter7;
  * @author Ignacio Pacheco
  *
  */
-public class Project7_7 {
+public class Project7_07 {
 
 	public static void main(String[] args){
 		

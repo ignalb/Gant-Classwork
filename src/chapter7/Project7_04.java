@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author Ignacio Pacheco
  *
  */
-public class Project7_4 {
+public class Project7_04 {
 	
 	static String getLetterGrade(int number){
 		if(number >= 60) {

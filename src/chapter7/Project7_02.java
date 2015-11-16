@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author Ignacio Pacheco
  *
  */
-public class Project7_2 {
+public class Project7_02 {
 
 	public static void printNum(int num){
 		System.out.printf("Is the number %d? ", num);
@@ -20,7 +20,7 @@ public class Project7_2 {
 	public static void main(String[] args){
 		Scanner in = new Scanner(System.in);
 		String response = "";
-		int guessNum = Project7_1.random(1, 100);
+		int guessNum = Project7_01.random(1, 100);
 		int lowest = 1, highest = 100;
 		int guesses = 1;
 		
@@ -36,9 +36,9 @@ public class Project7_2 {
 			if(response.equals("CORRECT") || response.equals("EQUAL") || response.equals("YES") || response.equals("TRUE")){
 				break;
 			}
-			if(response.equals("MORE")){
+			if(response.equals("MORE") || response.equals("HIGHER")){
 				lowest = guessNum;
-			} else if(response.equals("LESS")){
+			} else if(response.equals("LESS") || response.equals("LOWER")){
 				highest = guessNum;
 			}
 			guessNum = midPoint(lowest, highest);
