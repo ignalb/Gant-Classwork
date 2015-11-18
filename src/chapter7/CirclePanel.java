@@ -14,6 +14,8 @@ public class CirclePanel extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = -3338934820388885446L;
+	private static final Color[] colors = {Color.red, Color.orange, Color.yellow, Color.green, Color.blue};
+	static int i = 0;
 	
 	Circle_Spinning circle;
 
@@ -21,7 +23,9 @@ public class CirclePanel extends JPanel {
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
 			circle.move();
-			circle.turn(10);
+			circle.turn(3);
+			circle.setColor(colors[i % colors.length]);
+			i++;
 			repaint();
 		}
 	};
