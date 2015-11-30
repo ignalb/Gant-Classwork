@@ -3,6 +3,11 @@ package chapter7;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * 
+ * @author Ignacio Pacheco
+ *
+ */
 public class Project7_06 {
 	final static int ITERATIONS = 100;
 	

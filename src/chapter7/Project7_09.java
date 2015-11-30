@@ -4,6 +4,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * 
+ * @author Ignacio Pacheco
+ *
+ */
 public class Project7_09 {
 
 	public static void main(String[] args) {
