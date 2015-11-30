@@ -2,11 +2,11 @@ package chapter7;
 
 import java.awt.Color;
 
-public class Circle_Spinning extends Circle {
+public class Circle_Moving extends Circle {
 
 	int speed, direction;
 	
-	public Circle_Spinning(int x, int y, int r, Color c, int s, int dir){
+	public Circle_Moving(int x, int y, int r, Color c, int s, int dir){
 		super(x, y, r, c);
 		speed = s;
 		direction = dir;
