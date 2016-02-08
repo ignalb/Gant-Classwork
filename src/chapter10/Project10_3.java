@@ -16,21 +16,24 @@ public class Project10_3 {
 			nums[i] = in.nextInt();
 		}
 		
-		mode = getMode(nums).toArray(new Integer[0]);
+		mode = getMode(nums);
 		String modeS = Util.arrayToString(mode);
 		System.out.print("Mode : " + modeS);
 		
 		in.close();
 	}
 	
-	public static <T extends Number> List<T> getMode(T[] nums){
+	public static Integer[] getMode(Integer[] nums){
 		Arrays.sort(nums);
-		List<T> uNum = new ArrayList<T>();
-		List<Integer> uNumR = new ArrayList<Integer>();
+		List<Integer> uNum = new ArrayList<Integer>(), uNumR = new ArrayList<Integer>();
+		List<Integer> indeces = new ArrayList<Integer>();
+		Integer[] result;
 		Integer curR = 1, largestR = 0;
-		T prev = null;
+		Integer prev = null;
 		
 		for(int i = 0; i < nums.length; i++){
+			if(i == 0)
+				prev = nums[0] - 1;
 			if(prev == nums[i]){
 				curR++;
 			} else {
@@ -46,7 +49,19 @@ public class Project10_3 {
 		}
 		uNumR.add(curR);
 		
-		return Project10_5.getMode(uNum, uNumR);
+		for(int i = 0; i < uNumR.size(); i++){
+			if(uNumR.get(i) == largestR)
+				indeces.add(i);
+		}
+		
+		result = new Integer[indeces.size()];
+		for(int i = 0; i < result.length; i++){
+			result[i] = uNum.get(indeces.get(i));
+		}
+		System.err.println("uNum    (" + uNum.size() + ") : " + Util.arrayToString(uNum.toArray()));
+		System.err.println("uNumR   (" + uNumR.size() + ") : " + Util.arrayToString(uNumR.toArray()));
+		System.err.println("indeces (" + indeces.size() + ") : " + Util.arrayToString(indeces.toArray()));
+		return result;
 	}
 	
 }
