@@ -36,6 +36,7 @@ public class Project10_5 {
 		}
 		uNumF.add(curF);
 		
+		printF(uNum, uNumF);
 		
 		in.close();
 	}
@@ -46,7 +47,7 @@ public class Project10_5 {
 	public static <T extends Number> void printF(List<T> uNums, List<Integer> uNumF){
 		boolean[][] xGrid= new boolean[uNums.size()][uNumF.size()];
 		int mostDigits = 0;
-		Arrays.fill(xGrid, false);
+		
 		
 		for(int j = 0; j < uNums.size(); j++){
 			for(int i = 1; i <= uNumF.size(); i++){
@@ -61,7 +62,18 @@ public class Project10_5 {
 				mostDigits = digits;
 		}
 		
-		//TODO cont here
+		for(int j = 0; j < xGrid.length; j++){
+			for(int i = 0; i < xGrid[j].length; i++){
+				String s = (xGrid[i][j]) ? "X" : " ";
+				System.out.print(Util.center(s, mostDigits) + " ");
+			}
+			System.out.println();
+		}
+		System.out.println(Util.getRepChar('-', uNums.size() * (mostDigits + 1) - 1));
+		for(T num : uNums){
+			System.out.printf("%"+mostDigits+"s ", num.toString());			
+		}
+		
 	}
 	
 	public static <T extends Number> List<T> getMode(T[] uNums, Integer[] uNumF){
