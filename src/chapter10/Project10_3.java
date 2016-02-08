@@ -58,9 +58,9 @@ public class Project10_3 {
 		for(int i = 0; i < result.length; i++){
 			result[i] = uNum.get(indeces.get(i));
 		}
-		System.err.println("uNum    (" + uNum.size() + ") : " + Util.arrayToString(uNum.toArray()));
+		/*System.err.println("uNum    (" + uNum.size() + ") : " + Util.arrayToString(uNum.toArray()));
 		System.err.println("uNumR   (" + uNumR.size() + ") : " + Util.arrayToString(uNumR.toArray()));
-		System.err.println("indeces (" + indeces.size() + ") : " + Util.arrayToString(indeces.toArray()));
+		System.err.println("indeces (" + indeces.size() + ") : " + Util.arrayToString(indeces.toArray()));*/
 		return result;
 	}
 	

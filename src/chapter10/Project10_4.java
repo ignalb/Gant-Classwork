@@ -9,6 +9,7 @@ public class Project10_4 {
 		Scanner in = new Scanner(System.in);
 		Integer[] nums = new Integer[10];
 		
+		System.out.println("Enter 10 numbers:");
 		for(int i = 0; i < nums.length; i++){
 			nums[i] = in.nextInt();
 		}
