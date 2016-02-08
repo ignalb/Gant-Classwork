@@ -24,11 +24,4 @@ public class Util {
 		}
 	}
 	
-	public static String getRepChar(char c, int n){
-		String result = "";
-		for(int i = 0; i < n; i++){
-			result += c;
-		}
-		return result;
-	}
 }
