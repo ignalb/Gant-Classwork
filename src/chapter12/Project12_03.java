@@ -9,7 +9,7 @@ public class Project12_03 extends Project12_02 {
 		list.add("String");
 		list.add("a");
 		list.add('z');
-		System.out.println(list);
+		System.out.println("List: " + list);
 		
 		System.out.println("Removed element 0: " + list.remove(0));
 		System.out.println("New list: " + list);
