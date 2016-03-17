@@ -1,43 +1,28 @@
 package chapter12;
 
 public class Project12_01 {
-
-	public static void main(String[] args){
-		
-	}
 	
-}
-
-class ArrayList {
-	private Object[] array;
-	private int size = 0;
+	protected Object[] array;
+	protected int logical_size = 0;
 	
-	public ArrayList() {
+	public Project12_01() {
 		this(5);
-		size = 5;
 	}
-	public ArrayList(int length) {
-		size = length;
-		array = new Object[size];
+	public Project12_01(int length) {
+		array = new Object[length];
 	}
-	public ArrayList(ArrayList list) {
-		this(list.size());
-		for(int i = 0; i < size(); i++){
-			array[i] = list.get(i);
+	public Project12_01(Project12_01 list) {
+		this(list.logical_size);
+		for(int i = 0; i < list.logical_size; i++, logical_size++){
+			array[i] = list.array[i];
 		}
-	}
-	
-	public Object get(int i) throws IndexOutOfBoundsException {
-		return array[i];
-	}
-	public int size() {
-		return size;
 	}
 	
 	public String toString() {
 		String string = "";
-		for(Object x : array){
-			string += x + " ";
+		for(int i = 0; i < logical_size; i++){
+			string += array[i];
+			string += (i != logical_size - 1) ? ", " : "";
 		}
 		return string;
 	}
